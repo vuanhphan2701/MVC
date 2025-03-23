@@ -27,16 +27,16 @@
 							<?php 
 							$alert = new userController();
 							echo $alert->getError('alert');?>
-							<div class="select-role">
-								<div class="btn-group btn-group-toggle" data-toggle="buttons">
+							<div class="select-role" >
+								<div class="btn-group btn-group-toggle" data-toggle="buttons" >
 									<label class="btn active">
-										<input type="radio" name="options" id="admin">
+										<input type="radio" name="role" id="admin" value="Manager" required>
 										<div class="icon"><img src="public/public2/vendors/images/briefcase.svg" class="svg" alt=""></div>
 										<span>I'm</span>
 										Manager
 									</label>
 									<label class="btn">
-										<input type="radio" name="options" id="user">
+										<input type="radio" name="role" id="user" value="Employee">
 										<div class="icon"><img src="public/public2/vendors/images/person.svg" class="svg" alt=""></div>
 										<span>I'm</span>
 										Employee
@@ -44,13 +44,13 @@
 								</div>
 							</div>
 							<div class="input-group custom">
-								<input type="text" name="name" class="form-control form-control-lg" placeholder="Username">
+								<input type="text" name="name" class="form-control form-control-lg" placeholder="Username" required>
 								<div class="input-group-append custom">
 									<span class="input-group-text"><i class="icon-copy dw dw-user1"></i></span>
 								</div>
 							</div>
 							<div class="input-group custom">
-								<input type="password" name="pass"  class="form-control form-control-lg" placeholder="**********">
+								<input type="password" name="pass"  class="form-control form-control-lg" placeholder="**********" required>
 								<div class="input-group-append custom">
 									<span class="input-group-text"><i class="dw dw-padlock1"></i></span>
 								</div>
@@ -63,7 +63,7 @@
 									</div>
 								</div>
 								<div class="col-6">
-									<div class="forgot-password"><a href="<?php //echo href('user', 'forgetPassword') ?>">Forgot Password</a></div>
+									<div class="forgot-password"><a href="<?php echo href('user', 'forgetPassword') ?>">Forgot Password</a></div>
 								</div>
 							</div>
 							<div class="row">

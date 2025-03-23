@@ -8,7 +8,14 @@ if (class_exists($controllerName)) {
     if (method_exists($controller, $action))
     {
         if (isVerified()) {
-            $controller->$action();
+            //check role
+            if($controller->roleModel
+            ->confirmRole($_SESSION['login_id'],str_replace('Controller','',$controllerName),$action)){
+               $controller->$action();
+
+            }else{
+                $controller->_403();
+            }
         } else { 
             $user = (new userController())->authenticate();
         }
@@ -21,3 +28,4 @@ if (class_exists($controllerName)) {
     $controller->_404();
 }
 ob_end_flush();
+

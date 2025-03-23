@@ -15,7 +15,7 @@ function myUpload($file, &$imgMessenger = '', $forder, $type = ['.jpg', '.png', 
     }
     $fullpath = $forder . '/' . $name . time() . $ext;
     if (move_uploaded_file($file['tmp_name'], $fullpath)) {
-      return $fullpath;
+      return basename($fullpath);
     } else {
       $imgmsg = 'upload ko thanh cong';
       return false;

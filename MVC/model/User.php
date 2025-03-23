@@ -1,7 +1,7 @@
 <?php
 class User
 {
-    private $id, $password, $userName, $gender, $name, $phone, $email, $image, $status,$created_at,$updated_at;
+    private $id, $password, $userName, $gender, $name, $phone, $email, $image, $status,$address,$created_at,$updated_at;
     public function getId()
     {
         return $this->id;
@@ -65,6 +65,14 @@ class User
     public function setImage($image)
     {
         $this->image = $image;
+    }
+    public function getAddress()
+    {
+        return $this->address;
+    }
+    public function setAddress($address)
+    {
+        $this->address = $address;
     }
     public function getStatus()
     {

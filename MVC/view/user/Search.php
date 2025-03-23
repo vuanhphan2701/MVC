@@ -20,7 +20,7 @@
             </thead>
             <tbody>
                 <?php
-                foreach ($list as $item) {
+                foreach ($lists as $item) {
                     //echo '<pre>',print_r($item),'</pre>';
                 ?>
                     <tr>
@@ -36,7 +36,7 @@
                             ?>
 
                         </td>
-                        <td> <a name="" class="btn btn-dark" role="button" href="<?php echo href('user' ,'viewProfile')?>&id=<?php echo $item->getId() ?>"><i class="fas fa-user profile-icon"></i></a></td>
+                        <td> <a name="" class="btn btn-dark" role="button" href="<?php echo href('user' ,'checkProfile')?>&id=<?php echo $item->getId() ?>"><i class="fas fa-user profile-icon"></i></a></td>
 
                     </tr>
                 <?php } ?>
